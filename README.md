@@ -1,10 +1,10 @@
-# 🚀 Práctica: API REST con Node.js, Express y Supabase (PostgreSQL)
+# Práctica: API REST con Node.js, Express y Supabase (PostgreSQL)
 
 Este proyecto consiste en el diseño, implementación y despliegue de una base de datos relacional alojada en **Supabase** (PostgreSQL) con tres tablas relacionadas (`usuarios`, `productos`, `pedidos`), consumida a través de un backend en **Node.js** con **Express.js** que expone una **API REST** funcional con operaciones CRUD completas.
 
 ---
 
-## 🛠️ Stack Tecnológico
+##  Stack Tecnológico
 
 * **Backend Framework:** Node.js + Express.js (ES Modules)
 * **Base de Datos Cloud:** Supabase (PostgreSQL)
@@ -14,7 +14,7 @@ Este proyecto consiste en el diseño, implementación y despliegue de una base d
 
 ---
 
-## 📊 Diagrama Entidad-Relación (DER)
+## Estructura de base de datos
 
 El modelo de datos cuenta con **3 tablas relacionadas** mediante llaves foráneas (`1:N`), aplicando la regla de integridad referencial `ON DELETE CASCADE`.
 
@@ -38,33 +38,6 @@ El modelo de datos cuenta con **3 tablas relacionadas** mediante llaves foránea
    * `total`: DECIMAL(10,2).
    * `creado_en`: TIMESTAMP.
 
-
-## ⚙️ Instrucciones de Instalación y Configuración Local
-
-### 1. Clona este repositorio
-```bash
-git clone https://github.com/tu-usuario/actividadbd2.git
-cd actividadbd2
-```
-
-### 2. Instala las dependencias
-```bash
-npm install
-```
-
-### 3. Configura el archivo de Variables de Entorno (`.env`)
-Crea un archivo llamado `.env` en la raíz del proyecto y agrega tus credenciales de Supabase:
-
-```env
-PORT=3000
-SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_KEY=tu_llave_anon_o_service_role
-```
-
-> **Nota de Seguridad:** Nunca subas el archivo `.env` a GitHub. Asegúrate de incluirlo en el `.gitignore`.
-
-### 4. Inicializa la Base de Datos en Supabase
-Ejecuta las siguientes consultas en el **SQL Editor** de Supabase para estructurar las tablas y agregar datos iniciales:
 
 ```sql
 -- Tablas
@@ -116,7 +89,7 @@ El servidor estará corriendo en: `http://localhost:3000`
 
 ---
 
-## 📡 Documentación de Endpoints de la API
+## Documentación de Endpoints de la API
 
 | Verbo | Ruta | Descripción | Código Éxito |
 | :--- | :--- | :--- | :--- |
@@ -152,19 +125,7 @@ El servidor estará corriendo en: `http://localhost:3000`
 
 ---
 
-## 📸 Evidencias de Pruebas & Consola Cloud
 
-### 1. Capturas de Base de Datos en Supabase (Cloud)
-> *(Inserta aquí tus capturas del Table Editor en la consola de Supabase mostrando las 3 tablas con datos)*
 
-### 2. Evidencia de Ejecución en Postman / Thunder Client
-* **GET `/pedidos` (Listado general):** `200 OK`
-* **GET `/pedidos/1` (Búsqueda por ID):** `200 OK`
-* **POST `/pedidos` (Inserción exitosa):** `201 Created`
-* **PUT `/pedidos/1` (Actualización de registro):** `200 OK`
-* **DELETE `/pedidos/1` (Eliminación exitosa):** `200 OK`
-
----
-
-## ✒️ Autor
+## Autor: Emmanuel Sanchez Peralta
 * **Materia:** Bases de Datos en la Nube
